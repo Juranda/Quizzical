@@ -1,3 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
 
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1C1C1C;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+.Quizzical {
+  background-color: #F5F7FB;
+  height: 550px;
+  width: 550px;
+  position: relative;
+}
+.Quizzical img {
+  position: absolute;
+}
+.Quizzical img:nth-child(1) {
+  right: 0;
+}
+.Quizzical img:nth-child(2) {
+  left: 0;
+  bottom: 0;
+}
+
+.new-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.new-game-title {
+  margin-bottom: 29px;
+}
+.new-game-title h1 {
+  font-family: "Karla", sans-serif;
+  margin-bottom: 7px;
+}
+.new-game-start button {
+  width: 195px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  text-align: center;
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+}
+.new-game-start button:active {
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25) inset;
+}
 
 /*# sourceMappingURL=index.css.map */
