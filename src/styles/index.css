@@ -10,6 +10,10 @@ button {
   cursor: pointer;
 }
 
+input[type=radio] {
+  cursor: pointer;
+}
+
 * {
   font-family: "Inter", sans-serif;
 }
@@ -18,6 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   background-color: #1C1C1C;
   height: 100vh;
   width: 100%;
@@ -26,14 +31,16 @@ body {
 
 .Quizzical {
   background-color: #F5F7FB;
-  height: 550px;
   width: 550px;
   position: relative;
+  z-index: 0;
 }
 .Quizzical img {
   position: absolute;
+  z-index: 1;
 }
 .Quizzical img:nth-child(1) {
+  top: 0;
   right: 0;
 }
 .Quizzical img:nth-child(2) {
@@ -41,10 +48,17 @@ body {
   bottom: 0;
 }
 
+.main-screen {
+  min-height: 550px;
+  position: relative;
+  z-index: 2;
+}
+
 .new-game {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   flex-direction: column;
   height: 100%;
 }
@@ -66,6 +80,111 @@ body {
 }
 .new-game-start button:active {
   box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25) inset;
+}
+
+.gameplay {
+  padding: 40px 75px 25px;
+  height: calc(100% - 65px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22.5px;
+}
+.gameplay .questions {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.gameplay .questions .question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  border-bottom: 0.8px solid #4D5B9E;
+  align-items: start;
+}
+.gameplay .questions .question h3 {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  text-align: left;
+  color: #293264;
+  padding-block: 10px;
+}
+.gameplay .questions .question .answers {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  padding-bottom: 10px;
+}
+.gameplay .questions .question .answers .answer-in-game {
+  border: 0.8px solid #4D5B9E;
+  border-radius: 8px;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+.gameplay .questions .question .answers .answer-in-game.selected {
+  background-color: #D6DBF5;
+  border-color: transparent;
+}
+.gameplay .questions .question .answers .answer-end-game {
+  border-color: #4D5B9E;
+  color: #4D5B9E;
+  border: 0.8px solid #4D5B9E;
+  border-radius: 8px;
+  padding: 5px 5px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.gameplay .questions .question .answers .answer-end-game.selected.wrong {
+  background-color: #F8BCBC;
+  border-color: transparent;
+}
+.gameplay .questions .question .answers .answer-end-game.correct {
+  font-weight: 700;
+  opacity: 1;
+  background-color: #94D7A2;
+  border-color: transparent;
+  color: #293264;
+}
+.gameplay .questions .question .answers .answer p {
+  font-size: 10px;
+  font-size-adjust: 5%;
+  color: #4D5B9E;
+}
+.gameplay-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.gameplay-footer-results {
+  font-size: 12px;
+  width: 100%;
+}
+.gameplay-footer-button {
+  color: #F5F7FB;
+  background-color: #4D5B9E;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 120px;
+  height: 35px;
+  padding: 4.5px 13px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 550px;
 }
 
 /*# sourceMappingURL=index.css.map */
